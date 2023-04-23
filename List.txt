@@ -1,0 +1,3 @@
+Q- What is List Component ?
+
+A- The List component renders a list of items where each item can be selected by clicking on it. Each item in the list is represented by the SingleListItem component which receives a text prop and a boolean isSelected prop indicating whether it is currently selected or not. When an item is clicked, its corresponding index is passed to the onClickHandler prop which updates the selected index in the state.

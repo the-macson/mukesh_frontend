@@ -1,0 +1,20 @@
+Q2- 
+
+
+A2-
+
+There are a few problems/warnings with the code:
+
+In SingleListItem, the isSelected prop is being passed to the backgroundColor style property directly. However, backgroundColor should be a string, not a boolean. Instead, it should use a ternary operator to set the background color based on whether isSelected is true or false.
+
+
+In SingleListItem, the onClickHandler prop is being called immediately instead of being passed as a function reference. It should be wrapped in an arrow function to ensure that it is only called when the item is clicked.
+
+
+In WrappedListComponent, the setSelectedIndex hook is being used incorrectly. Instead of calling it as a function, it is being used as an array. It should be const [selectedIndex, setSelectedIndex] = useState(null);.
+
+
+In WrappedListComponent, the items prop is not being checked for null or undefined before mapping over it. This can result in an error if the prop is not passed or is null/undefined.
+
+
+In WrappedListComponent, the propTypes definition for the items prop is incorrect. It should be PropTypes.arrayOf(PropTypes.shape({ text: PropTypes.string.isRequired })).
